@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  background: #000000;
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-display);
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --size-home-title: clamp(3.75rem, 8vw, 6rem);
+  --size-page-title: clamp(2.25rem, 4.5vw, 3.5rem);
+  --size-lead: clamp(1rem, 1.2vw, 1.1rem);
+  --size-body: clamp(0.95rem, 1.2vw, 1rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #000000;
+  color: #ffffff;
+  text-rendering: geometricPrecision;
+}
+
+::selection {
+  background: #ffffff;
+  color: #000000;
+}
+
+a {
+  text-underline-offset: 0.22em;
+}
+
+*:focus-visible {
+  outline: 1px solid #ffffff;
+  outline-offset: 4px;
+}
+
+@layer components {
+  .site-brand {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2.4vw, 1.75rem);
+    line-height: 1;
+  }
+
+  .home-title {
+    font-family: var(--font-display);
+    font-size: var(--size-home-title);
+    line-height: 0.9;
+    letter-spacing: 0;
+  }
+
+  .page-title {
+    font-family: var(--font-display);
+    font-size: var(--size-page-title);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .lead-copy {
+    font-size: var(--size-lead);
+    line-height: 1.65;
+    color: rgb(212 212 212);
+  }
+
+  .body-copy {
+    font-size: var(--size-body);
+    line-height: 1.8;
+    color: rgb(163 163 163);
+  }
+
+  .quiet-link {
+    color: rgb(163 163 163);
+    transition: color 200ms ease;
+  }
+
+  .quiet-link:hover {
+    color: #ffffff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
