@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://sahajsaboo.github.io/sitemap.xml/
+Sitemap: https://sahajsaboo.github.io/sitemap.xml
