@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://sahajsaboo.github.io
+
+# Sitemaps
+Sitemap: https://sahajsaboo.github.io/sitemap.xml
